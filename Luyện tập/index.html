@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<fieldset>
+    <legend>
+        <table>
+            <tr>
+                <td><button onclick="Bai1()">CLick Lesson 1</button></td>
+                <td><button onclick="Bai2()">CLick Lesson 2</button></td>
+                <td><button onclick="Bai3()">CLick Lesson 3</button></td>
+                <td><button onclick="Bai4()" >CLick Lesson 4</button></td>
+                <td><button onclick="Bai5()" >CLick Lesson 5</button></td>
+                <td><button onclick="Bai6()" >CLick Lesson 6</button></td>
+                <td><button onclick="Bai7()" >CLick Lesson 7</button></td>
+            </tr>
+        </table>
+    </legend>
+</fieldset>
+<script>
+
+    // Start  lesson 7
+    function Bai7() {
+        for (let i = 0 ; i < 100 ; i ++){
+            if (i % 3 ==0 && i % 5==0) {
+                document.write( '&nbsp;' +' Fizz Buzz'+ i )
+
+            }else if (i % 5 == 0 ){
+                document.write( '&nbsp;'+' Buzz' +i  )
+            }else if (i % 3 == 0){
+                document.write('&nbsp;'+ i+'Fizz')
+            }else {
+                document.write('&nbsp;' + '&nbsp;' +i +'No'  )
+            }
+        }
+    }
+    // End   lesson 7
+
+    // Start  lesson 4
+    function Bai4() {
+        let n1 = 0;
+        let n2 = 1;
+        let nextTerm;
+        let check = true;
+
+        while (check){
+            // document.write(n1 + " ");
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+
+            if (n1 % 5 === 0){
+                document.write(' Số đầu tiên chia hết cho 5 là : ' + n1)
+                check = false;
+            }
+        }
+    }
+
+    // End lesson 4
+    // <!--Start Less 5-->
+    function Bai5() {
+        document.write('Tổng 20 số đầu trong dãy Fibonacci : ')
+        count = 0;
+        let n1 = 0;
+        let n2 = 1;
+        let next;
+        let total = 0;
+        for (let i = 0; i < 20; i++) {
+
+            document.write(n1 + " ");
+            next = n1 + n2;
+            n1 = n2;
+            n2 = next;
+        }
+        while (count < 20){;
+            n1 = n2;
+            n2 = next;
+            next = n1 + n2;
+            total = total + n1;
+            count ++;
+        }
+        document.write("=" + " " +total)
+
+    }
+    // <!--End lesson 5-->
+    // Start Lesson 6
+    function Bai6() {
+        count = 0 ;
+        let n1 =  7 ;
+        let total = 0;
+        document.write('Tổng 30 số đầu tiên chia hết cho 7 ')
+        // for (let i = 0 ; i < 30 ; i++){
+        //     document.write( n1 + " ");
+        //     total = n1
+        //     n1 += total
+        //
+        // }
+        while (count < 30 ){
+            total += n1
+            n1 = total
+            count ++
+        }
+        document.write('= ' + total)
+    }
+    // End lesson 6
+
+    // Start lesson 3
+
+      function Bai3() {
+        document.write('20 số đầu trong dãy Fibonacci : ')
+          count = 0;
+          let n1 = 0;
+          let n2 = 1;
+          let next;
+          let total = 0;
+          for (let i = 0; i < 20; i++) {
+
+              document.write(n1 + " ");
+              next = n1 + n2;
+              n1 = n2;
+              n2 = next;
+          }
+          // while (count < 20){;
+          //     n1 = n2;
+          //     n2 = next;
+          //     next = n1 + n2;
+          //     total = total + n1;
+          //     count ++;
+          // }
+          // document.write("=" + " " +total)
+      }
+
+    // End lesson 3
+
+    // Start lesson 2
+
+       function Bai2() {
+           const number = parseInt(prompt('Mời nhập vào nhiệt độ hiện tại : '))
+           if (number > 100){
+               alert('Giảm nhiệt độ xuống : ')
+           }
+           else if( number < 20){
+               alert('Tăng nhiệt độ lên : ')
+           }else {
+               alert('Nhiệt độ hiện tại chỗ bạn là : ' + number + " C")
+           }
+       }
+    // End lesson 2
+    // Start lesson 1
+      function Bai1() {
+          for ( let i = 0 ; i< 100; i++){
+
+              document.write(i )
+              document.write("<br>")
+              if (i == 99){
+                  document.write('Chương trình đã hoàn thành ' )
+              }
+          }
+      }
+    // End lesson 1
+    </script>
+</body>
+</html>

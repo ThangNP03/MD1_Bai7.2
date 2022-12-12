@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeted</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Enter the number of prime numbers to print:"));
+    let count = 0;
+    for (let N = 2; count < numbers; N++) {
+        console.log('N =================',N)
+        let check = true;
+        for (let i = 2; i < N; i++) {
+            console.log('i ==== ',i)
+            if (N % i == 0) {
+                console.log('N trong if --> ',N)
+                check = false;
+                break;
+            }
+        }
+        if (check == true) {
+            count++;
+            document.write(N + " ")
+        }
+    }
+    document.write("print N value after checking prime number sequence: " + N)
+</script>
+<!--<script>-->
+<!--    let userInput = prompt('Mời nhập vào số bất ky: ')-->
+<!--    let count = 0 ;-->
+<!--    for( let snt = 2; count < userInput; snt++ ){-->
+<!--        for (let i = 2; i < snt; i++){-->
+<!--            if(snt % i == 0){-->
+<!--               break;-->
+<!--            }-->
+<!--            else {-->
+<!--                count++ ;-->
+<!--                document.write(snt)-->
+<!--            }-->
+<!--        }-->
+
+<!--    }-->
+<!--</script>-->
+</body>
+</html>
